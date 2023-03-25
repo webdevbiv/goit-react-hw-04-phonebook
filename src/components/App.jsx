@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ContactForm } from './ContactForm/ContactForm'
 import ContactList from './ContactList/ContactList'
-import Filter from './Filter/Filter'
+import { Filter } from './Filter/Filter'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -9,7 +9,7 @@ import { nanoid } from 'nanoid'
 
 export const App = () => {
   const [contacts, setContacts] = useState(
-    () => JSON.parse(localStorage.getItem('contacts')) ?? '',
+    () => JSON.parse(localStorage.getItem('contacts')) ?? [],
   )
   const [filter, setFilter] = useState('')
 

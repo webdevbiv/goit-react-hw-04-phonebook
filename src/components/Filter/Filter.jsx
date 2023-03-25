@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
-function Filter({ onChange }) {
+export function Filter({ onChange }) {
     return (
         <Form.Group className="mb-3" >
             <Form.Label>Find contacts by name</Form.Label>
@@ -21,4 +21,3 @@ Filter.propTypes = {
     onChange: PropTypes.func.isRequired
 }
 
-export default Filter
